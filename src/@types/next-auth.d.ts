@@ -13,3 +13,5 @@ declare module 'next-auth' {
     user: User
   }
 }
+
+export default NextAuth

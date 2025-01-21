@@ -2,6 +2,7 @@ import { prisma } from '@/lib/prisma'
 import dayjs from 'dayjs'
 import { NextApiRequest, NextApiResponse } from 'next'
 
+/* eslint-disable camelcase */
 export default async function handle(
   req: NextApiRequest,
   res: NextApiResponse,

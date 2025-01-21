@@ -8,6 +8,7 @@ export function PrismaAdapter(
   res: NextApiResponse | NextPageContext['res'],
 ): Adapter {
   return {
+    /* eslint-disable @typescript-eslint/no-explicit-any */
     async createUser(user: any) {
       const { '@ignite-call:userId': userIdCookies } = parseCookies({ req })
 
@@ -128,6 +129,7 @@ export function PrismaAdapter(
         avatar_url: prismaUser.avatar_url!,
       }
     },
+    /* eslint-disable @typescript-eslint/no-explicit-any */
     async linkAccount(account: any) {
       await prisma.account.create({
         data: {

@@ -2,6 +2,7 @@ import { google } from 'googleapis'
 import { prisma } from './prisma'
 import dayjs from 'dayjs'
 
+/* eslint-disable camelcase */
 export async function getGoogleOAuthToken(userId: string) {
   const account = await prisma.account.findFirstOrThrow({
     where: {
